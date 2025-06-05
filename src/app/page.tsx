@@ -1,3 +1,5 @@
+'use client';
+
 import { ServicesSection } from '../components/ServicesSection';
 import { PricingSection } from '../components/PricingSection';
 import { TestimonialsSection } from '../components/TestimonialsSection';
@@ -8,7 +10,7 @@ export default function HomePage() {
   return (
     <>
       {/* HERO */}
-      <main className="min-h-screen flex flex-col items-center justify-center bg-black pt-16">
+      <main className="min-h-screen flex flex-col items-center justify-center bg-neutral-900 pt-16">
         <motion.h1 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -36,17 +38,17 @@ export default function HomePage() {
         </motion.a>
       </main>
       
-  {/* SEKCJE */}
-  <section id="services">
-    <ServicesSection />
-  </section>
-  <section id="pricing">
-    <PricingSection />
-  </section>
-  <section id="testimonials">
-    <TestimonialsSection />
-  </section>
-  <ContactSection />
-</>
+      {/* SEKCJE */}
+      <section id="services">
+        <ServicesSection />
+      </section>
+      <section id="pricing">
+        <PricingSection />
+      </section>
+      <section id="testimonials">
+        <TestimonialsSection />
+      </section>
+      <ContactSection />
+    </>
   );
 }
