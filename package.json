@@ -10,7 +10,11 @@
     "test": "jest"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@vercel/analytics": "^1.1.1",
+=======
+    "@supabase/supabase-js": "^2.49.10",
+>>>>>>> ba45158 (Dodano @supabase/supabase-js jako zależność)
     "framer-motion": "^12.16.0",
     "next": "14.0.4",
     "react": "^18.2.0",
