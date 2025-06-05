@@ -8,14 +8,7 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
-  },
-  webpack: (config) => {
-    if (config.optimization.splitChunks === false) {
-      config.optimization.splitChunks = {};
-    }
-    config.optimization.splitChunks.chunks = 'all';
-    return config;
-  },
+  }
 };
 
 export default nextConfig;
