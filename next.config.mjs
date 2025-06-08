@@ -5,10 +5,10 @@ const nextConfig = {
     domains: ['images.pexels.com'],
     formats: ['image/avif', 'image/webp'],
   },
-  experimental: {
-    optimizeCss: true,
-    scrollRestoration: true,
-  }
+  output: 'export',
+  trailingSlash: true,
+  skipTrailingSlashRedirect: true,
+  distDir: 'out'
 };
 
 export default nextConfig;
