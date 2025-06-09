@@ -1,13 +1,12 @@
 import { Metadata } from 'next';
 
-export function generateStructuredData() {
-  return {
+export function generateStructuredData() {  return {
     '@context': 'https://schema.org',
     '@type': 'MusicGroup',
     name: 'Bandoo Studio',
-    url: 'https://bandoo-studio.pl',
-    logo: 'https://bandoo-studio.pl/bandoo-logo.png',
-    image: 'https://bandoo-studio.pl/og-image.jpg',
+    url: 'https://bandoo.studio',
+    logo: 'https://bandoo.studio/bandoo-logo.png',
+    image: 'https://bandoo.studio/og-image.jpg',
     description: 'Profesjonalne studio nagrań oferujące usługi nagrywania, mixu, masteringu i produkcji muzycznej.',
     address: {
       '@type': 'PostalAddress',
@@ -84,14 +83,13 @@ export function generateStructuredData() {
   };
 }
 
-export function generateLocalBusinessData() {
-  return {
+export function generateLocalBusinessData() {  return {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    '@id': 'https://bandoo-studio.pl',
+    '@id': 'https://bandoo.studio',
     name: 'Bandoo Studio',
-    image: 'https://bandoo-studio.pl/og-image.jpg',
-    url: 'https://bandoo-studio.pl',
+    image: 'https://bandoo.studio/og-image.jpg',
+    url: 'https://bandoo.studio',
     telephone: '+48123456789',
     priceRange: '$$',
     description: 'Profesjonalne studio nagrań oferujące usługi nagrywania, mixu, masteringu i produkcji muzycznej.',

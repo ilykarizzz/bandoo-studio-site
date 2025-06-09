@@ -18,7 +18,7 @@ export const viewport: Viewport = {
  * Can be extended or overridden by individual pages
  */
 export const defaultMetadata: Metadata = {
-  metadataBase: new URL('https://bandoo-studio.pl'),
+  metadataBase: new URL('https://bandoo.studio'),
   title: {
     default: 'Bandoo Studio - Profesjonalne Studio Nagrań | Najwyższa Jakość Dźwięku',
     template: '%s | Bandoo Studio'
@@ -55,7 +55,7 @@ export const defaultMetadata: Metadata = {
   },  openGraph: {
     type: 'website',
     locale: 'pl_PL',
-    url: 'https://bandoo-studio.pl',
+    url: 'https://bandoo.studio',
     siteName: 'Bandoo Studio',
     title: 'Bandoo Studio - Profesjonalne Studio Nagrań | Najwyższa Jakość Dźwięku',
     description: 'Studio nagrań Bandoo oferuje profesjonalne nagrania, mix, mastering oraz produkcję muzyczną. Nowoczesny sprzęt, doświadczeni realizatorzy i przystępne ceny.',
@@ -81,8 +81,7 @@ export const defaultMetadata: Metadata = {
     title: 'Bandoo Studio - Profesjonalne Studio Nagrań',
     description: 'Studio nagrań Bandoo oferuje profesjonalne nagrania, mix, mastering oraz produkcję muzyczną. Umów sesję już dziś!',
     images: ['/og-image.jpg'],
-  },
-  robots: {
+  },  robots: {
     index: true,
     follow: true,
     googleBot: {
@@ -93,9 +92,9 @@ export const defaultMetadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://bandoo-studio.pl',
+    canonical: 'https://bandoo.studio',
     languages: {
-      'pl-PL': 'https://bandoo-studio.pl',
+      'pl-PL': 'https://bandoo.studio',
     },
   },
   verification: {
