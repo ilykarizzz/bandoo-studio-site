@@ -1,0 +1,7 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#1f2937"/>
+  <rect x="500" y="250" width="50" height="300" fill="#6b7280"/>
+  <circle cx="525" cy="200" r="80" fill="#374151"/>
+  <circle cx="525" cy="200" r="40" fill="#00E0FF"/>
+  <text x="600" y="150" font-family="Arial" font-size="40" text-anchor="middle" fill="white">Setup mikrofonowy</text>
+</svg>

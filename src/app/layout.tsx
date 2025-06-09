@@ -1,27 +1,54 @@
 import './globals.css';
-import { Analytics } from '@vercel/analytics/react';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
-import { Metadata } from 'next';
+import { PageTransition } from '../components/PageTransition';
+import { SkipToContent } from '../components/SkipToContent';
+import { CustomCursor } from '../components/CustomCursor';
+import { ScrollProgressBar } from '../components/ScrollProgressBar';
+import { ThemeProvider } from '../context/ThemeContext';
+import { ReducedMotionProvider } from '../context/ReducedMotionContext';
+import { Analytics } from '@vercel/analytics/react';
+import { defaultMetadata, viewport } from '../lib/metadata';
+import { generateStructuredData, generateLocalBusinessData } from '../lib/structuredData';
 
-export const metadata: Metadata = {
-  title: 'Bandoo Studio - Profesjonalne Studio Nagrań',
-  description: 'Studio nagrań Bandoo oferuje profesjonalne nagrania, mix, mastering oraz produkcję muzyczną. Najwyższa jakość dźwięku w przystępnych cenach.',
-  openGraph: {
-    title: 'Bandoo Studio - Profesjonalne Studio Nagrań',
-    description: 'Studio nagrań Bandoo oferuje profesjonalne nagrania, mix, mastering oraz produkcję muzyczną.',
-    images: ['/og-image.jpg'],
-  },
-};
+export const metadata = defaultMetadata;
+export { viewport };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="pl">
-      <body>
-        <Navbar />
-        {children}
-        <Footer />
-        <Analytics />
+  // Generate structured data for the page
+  const studioData = generateStructuredData();
+  const localBusinessData = generateLocalBusinessData();  return (
+    <html lang="pl" className="scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(studioData)
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessData)
+          }}
+        />
+      </head>
+      <body className="bg-light-bg dark:bg-darkbg text-gray-900 dark:text-white transition-colors duration-300">
+        <ThemeProvider>
+          <ReducedMotionProvider>
+            <SkipToContent />
+            <CustomCursor />
+            <ScrollProgressBar />
+            <Navbar />
+            <PageTransition>
+              <main id="main-content">
+                {children}
+              </main>
+            </PageTransition>
+            <Footer />
+            <Analytics />
+          </ReducedMotionProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

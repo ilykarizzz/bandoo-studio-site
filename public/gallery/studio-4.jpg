@@ -1,0 +1,8 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#1f2937"/>
+  <rect x="200" y="300" width="800" height="200" fill="#374151"/>
+  <rect x="300" y="250" width="150" height="300" fill="#4b5563"/>
+  <rect x="750" y="250" width="150" height="300" fill="#4b5563"/>
+  <rect x="300" y="400" width="600" height="50" fill="#00E0FF"/>
+  <text x="600" y="150" font-family="Arial" font-size="40" text-anchor="middle" fill="white">Sala kontrolna</text>
+</svg>
