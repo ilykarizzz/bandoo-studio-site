@@ -14,12 +14,11 @@ export function AboutUsSection() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true, amount: 0.3 }}
           className="mb-16"
-        >
-          <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan to-purple-500">About</span> Bandoo
+        >          <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan to-purple-500">O</span> nas
           </h2>
           <p className="text-center text-gray-400 max-w-3xl mx-auto">
-            Where creativity meets technical excellence to bring your musical vision to life.
+            Gdzie pasja spotyka się z profesjonalizmem, aby Twoja muzyka brzmiała doskonale.
           </p>
         </motion.div>
 
@@ -40,28 +39,36 @@ export function AboutUsSection() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
               viewport={{ once: true, amount: 0.3 }}
-            >              <h3 className="text-2xl md:text-3xl font-bold mb-6">Studio With Soul</h3>
+            >              <h3 className="text-2xl md:text-3xl font-bold mb-6">Witamy w <span className="text-cyan">Bandoo Studio</span></h3>
               
               <div className="space-y-4">
                 <p className="text-gray-300 dark:text-gray-400">
-                  With over 7 years of experience, Bandoo Studio has helped bring more than 100 music projects to life, from local indie bands to internationally recognized artists.
+                  Witamy w <strong>Bandoo Studio</strong> – domowym, acz w pełni profesjonalnym studiu nagrań, w którym pasja łączy się z precyzją i nowoczesnym brzmieniem. Naszym celem jest wydobycie z każdego artysty tego, co w nim najlepsze: od pierwszych prób po ostateczny mix i mastering. Dzięki pracy na sprzęcie klasy premium (Neumann TLM 102, Arturia AudioFuse Studio, monitory KRK Rokit 5) oraz zestawowi wtyczek FabFilter i UAD, gwarantujemy czyste, dynamiczne i pełne detali nagrania.
                 </p>
-                <p className="text-gray-300 dark:text-gray-400">
-                  Our studio is equipped with top-quality gear including Neumann microphones, Universal Audio interfaces, Adam monitors, and professional production software to ensure your music sounds its absolute best.
-                </p>
-                <p className="text-gray-300 dark:text-gray-400">
-                  Our philosophy is simple: provide world-class recording facilities paired with engineers who are as passionate about your music as you are.
+                <h4 className="text-xl font-bold text-cyan mt-6 mb-2">Co nas wyróżnia:</h4>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li className="text-gray-300 dark:text-gray-400">
+                    <strong>Kompleksowa obsługa:</strong> Nagrania wokalu i instrumentów, produkcja beatów, miks i mastering – wszystko pod jednym dachem.
+                  </li>
+                  <li className="text-gray-300 dark:text-gray-400">
+                    <strong>Indywidualne podejście:</strong> Twój projekt traktujemy jak własny, doradzamy aranżacje, sugestie brzmieniowe i techniczne rozwiązania.
+                  </li>
+                  <li className="text-gray-300 dark:text-gray-400">
+                    <strong>Elastyczne terminy & konkurencyjny cennik:</strong> Oferujemy godziny nagrań i miksów dostosowane do Twoich potrzeb, z pakietami promocyjnymi (np. 3h w cenie 2, 5h w cenie 3).
+                  </li>
+                </ul>
+                <p className="text-gray-300 dark:text-gray-400 mt-4">
+                  W Bandoo Studio <strong>twoja twórczość</strong> to nasza misja – tworzymy przestrzeń, w której każdy dźwięk zyskuje profesjonalną oprawę. Zapraszamy do rezerwacji sesji i wspólnego kreowania niepowtarzalnego brzmienia!
                 </p>
               </div>
-              
-              <div className="mt-8 grid grid-cols-2 gap-4">
+                <div className="mt-8 grid grid-cols-2 gap-4">
                 <div className="bg-darkbg/50 dark:bg-white/5 p-4 rounded-lg">
                   <h4 className="font-bold text-cyan">7+</h4>
-                  <p className="text-gray-400 text-sm">Years Experience</p>
+                  <p className="text-gray-400 text-sm">Lat Doświadczenia</p>
                 </div>
                 <div className="bg-darkbg/50 dark:bg-white/5 p-4 rounded-lg">
                   <h4 className="font-bold text-cyan">100+</h4>
-                  <p className="text-gray-400 text-sm">Projects Completed</p>
+                  <p className="text-gray-400 text-sm">Zrealizowanych Projektów</p>
                 </div>
               </div>
             </motion.div>
