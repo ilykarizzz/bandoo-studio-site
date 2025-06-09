@@ -15,13 +15,12 @@ export function Logo() {
   const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.1, 0.9]);
   const opacity = useTransform(scrollYProgress, [0, 0.8, 1], [1, 0.8, 0]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, 10]);
 
   return (
     <motion.div 
       ref={ref}
-      className="relative w-48 h-48 md:w-64 md:h-64 mb-6"
-      style={{ y, scale, opacity, rotate }}
+      className="relative w-24 h-24 md:w-32 md:h-32 mb-6"
+      style={{ y, scale, opacity }}
     >
       <Image 
         src="/bandoo-logo.png" 

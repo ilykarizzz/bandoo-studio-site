@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bandoo-studio.com/sitemap.xml
+Sitemap: https://bandoo.studio/sitemap.xml

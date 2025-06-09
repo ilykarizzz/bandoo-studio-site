@@ -14,7 +14,6 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>('dark');
-
   // On mount, read the theme from localStorage or use system preference
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme') as Theme | null;
@@ -22,9 +21,8 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     if (storedTheme) {
       setTheme(storedTheme);
     } else {
-      // Check system preference
-      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setTheme(systemPrefersDark ? 'dark' : 'light');
+      // Default to dark theme
+      setTheme('dark');
     }
   }, []);
 

@@ -16,34 +16,33 @@ interface Testimonial {
 export function TestimonialsSection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAutoplay, setIsAutoplay] = useState(true);
-  
-  const testimonials: Testimonial[] = [
+    const testimonials: Testimonial[] = [
     {
       name: "Michał K.",
       text: "Profesjonalne podejście i świetna atmosfera. Nagrania brzmią fenomenalnie! Polecam każdemu artyście, który szuka miejsca do nagrania swoich utworów.",
       role: "Raper",
-      avatar: "/avatars/avatar-1.png",
+      avatar: "/avatars/avatar-1.png", // Using provided images
       rating: 5
     },
     {
       name: "Zespół Euforia",
       text: "Współpraca z Bandoo Studio to sama przyjemność. Polecamy każdemu, kto szuka dobrego brzmienia. Studio jest wyposażone w najlepszy sprzęt, który pozwala uzyskać wyjątkowe brzmienie.",
       role: "Zespół rockowy",
-      avatar: "/avatars/avatar-2.png",
+      avatar: "/avatars/avatar-2.png", // Using provided images
       rating: 5
     },
     {
       name: "Anna W.",
       text: "Mix i master na najwyższym poziomie. Będę wracać! Profesjonalizm i życzliwe podejście to coś, co wyróżnia Bandoo Studio na tle innych.",
       role: "Wokalistka",
-      avatar: "/avatars/avatar-3.png",
+      avatar: "/avatars/avatar-3.png", // Using provided images
       rating: 5
     },
     {
       name: "Tomasz B.",
       text: "Niesamowite doświadczenie! Każda minuta spędzona w Bandoo Studio była produktywna i przyjemna. Realizator pomógł mi dopracować każdy szczegół mojego utworu.",
       role: "Producent muzyczny",
-      avatar: "/avatars/avatar-4.png",
+      avatar: "/avatars/avatar-4.png", // Using provided images
       rating: 5
     }
   ];

@@ -29,7 +29,6 @@ export function Navbar() {
     { name: 'O nas', href: '#about' },
     { name: 'Usługi', href: '#services' },
     { name: 'Cennik', href: '#pricing' },
-    { name: 'Galeria', href: '#gallery' },
     { name: 'Referencje', href: '#testimonials' },
     { name: 'Kontakt', href: '#contact' }
   ];

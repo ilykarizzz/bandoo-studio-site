@@ -4,7 +4,6 @@ import { ServicesSection } from '../components/ServicesSection';
 import { PricingSection } from '../components/PricingSection';
 import { TestimonialsSection } from '../components/TestimonialsSection';
 import { ContactSection } from '../components/ContactSection';
-import { GallerySection } from '../components/GallerySection';
 import { AboutUsSection } from '../components/AboutUsSection';
 import { AnimatedBackground } from '../components/AnimatedBackground';
 import { VideoBackground } from '../components/VideoBackground';
@@ -82,17 +81,18 @@ export default function HomePage() {
         <motion.div
           className="flex flex-col items-center z-10 px-4"
           style={{ opacity: heroOpacity, y: heroY }}
-        >
-          <Logo />
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-[5rem] md:text-[8rem] font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan to-purple-500 text-center drop-shadow-[0_0_15px_rgba(0,224,255,0.5)] mt-8"
-          >
-            Bandoo Studio
-          </motion.h1>
+        >          <div className="flex items-center justify-center">
+            <Logo />
+            
+            <motion.h1 
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="text-[4rem] md:text-[6rem] font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan to-purple-500 text-center drop-shadow-[0_0_15px_rgba(0,224,255,0.5)] ml-4"
+            >
+              Bandoo
+            </motion.h1>
+          </div>
           
           <motion.p 
             initial={{ opacity: 0 }}
@@ -101,26 +101,16 @@ export default function HomePage() {
             className="mt-4 text-xl md:text-2xl text-white text-center max-w-lg font-light tracking-wider"
           >
             <span className="text-cyan font-normal">Nagrania</span> | <span className="text-cyan font-normal">Mix & Master</span> | <span className="text-cyan font-normal">Produkcja Beatów</span>
-          </motion.p>          <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
+          </motion.p>          <div className="mt-8 flex items-center">
             <MotionButton
               variant="primary"
               size="lg"
               href="#contact"
-              initial={{ opacity: 0, scale: 0.8, x: -20 }}
-              animate={{ opacity: 1, scale: 1, x: 0 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.7 }}
             >
               Zarezerwuj sesję
-            </MotionButton>
-            <MotionButton
-              variant="outline"
-              size="lg"
-              href="#gallery"
-              initial={{ opacity: 0, scale: 0.8, x: 20 }}
-              animate={{ opacity: 1, scale: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-            >
-              Zobacz nasze studio
             </MotionButton>
           </div>
           
@@ -150,13 +140,7 @@ export default function HomePage() {
         <PricingSection />
         <SectionDivider type="curve" fillClassName="fill-gray-50/10 dark:fill-gray-900/50" />
       </section>
-      
-      <section id="gallery">
-        <GallerySection />
-        <SectionDivider type="zigzag" fillClassName="fill-darkbg dark:fill-gray-100/5" />
-      </section>
-      
-      <section id="testimonials">
+        <section id="testimonials">
         <TestimonialsSection />
         <SectionDivider type="wave" invertY={true} fillClassName="fill-cyan/5" />
       </section>

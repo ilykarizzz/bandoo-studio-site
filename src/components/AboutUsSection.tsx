@@ -40,12 +40,14 @@ export function AboutUsSection() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
               viewport={{ once: true, amount: 0.3 }}
-            >
-              <h3 className="text-2xl md:text-3xl font-bold mb-6">Studio With Soul</h3>
+            >              <h3 className="text-2xl md:text-3xl font-bold mb-6">Studio With Soul</h3>
               
               <div className="space-y-4">
                 <p className="text-gray-300 dark:text-gray-400">
-                  Founded in 2010, Bandoo Studio has been the birthplace of countless musical journeys, from local indie bands to internationally recognized artists.
+                  With over 7 years of experience, Bandoo Studio has helped bring more than 100 music projects to life, from local indie bands to internationally recognized artists.
+                </p>
+                <p className="text-gray-300 dark:text-gray-400">
+                  Our studio is equipped with top-quality gear including Neumann microphones, Universal Audio interfaces, Adam monitors, and professional production software to ensure your music sounds its absolute best.
                 </p>
                 <p className="text-gray-300 dark:text-gray-400">
                   Our philosophy is simple: provide world-class recording facilities paired with engineers who are as passionate about your music as you are.
@@ -54,11 +56,11 @@ export function AboutUsSection() {
               
               <div className="mt-8 grid grid-cols-2 gap-4">
                 <div className="bg-darkbg/50 dark:bg-white/5 p-4 rounded-lg">
-                  <h4 className="font-bold text-cyan">12+</h4>
+                  <h4 className="font-bold text-cyan">7+</h4>
                   <p className="text-gray-400 text-sm">Years Experience</p>
                 </div>
                 <div className="bg-darkbg/50 dark:bg-white/5 p-4 rounded-lg">
-                  <h4 className="font-bold text-cyan">500+</h4>
+                  <h4 className="font-bold text-cyan">100+</h4>
                   <p className="text-gray-400 text-sm">Projects Completed</p>
                 </div>
               </div>

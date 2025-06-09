@@ -6,17 +6,13 @@ import Image from 'next/image';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
-
   const socialLinks = [
-    { icon: FaInstagram, href: "#", label: "Instagram" },
-    { icon: FaFacebook, href: "#", label: "Facebook" },
-    { icon: FaYoutube, href: "#", label: "YouTube" }
+    { icon: FaInstagram, href: "https://www.instagram.com/bandoo.studio/", label: "Instagram" }
   ];
-
   const contactInfo = [
     { icon: FaMapMarkerAlt, text: "ul. Przykładowa 123, Warszawa" },
     { icon: FaPhone, text: "+48 123 456 789" },
-    { icon: FaEnvelope, text: "kontakt@bandoo-studio.pl" }
+    { icon: FaEnvelope, text: "kontakt@bandoo.studio" }
   ];
 
   const fadeInUp = {
