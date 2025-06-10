@@ -1,7 +1,5 @@
 {
   "version": 2,
-  "buildCommand": "next build",
-  "outputDirectory": "out",
   "framework": "nextjs",
   "public": true,
   "cleanUrls": true
