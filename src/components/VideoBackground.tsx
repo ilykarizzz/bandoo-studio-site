@@ -37,14 +37,11 @@ export function VideoBackground() {
   }, [prefersReducedMotion]);
 
   return (
-    <div className="absolute inset-0 overflow-hidden z-0">
-      {/* Video overlay gradient */}
+    <div className="absolute inset-0 overflow-hidden z-0">      {/* Video overlay gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-darkbg z-10"></div>
-      
-      {/* Fallback image for mobile or when video fails to load */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
-           style={{ backgroundImage: 'url(/hero-fallback.jpg)' }}>
-      </div>      {/* Video background - only load on non-mobile for performance */}
+        {/* Solid background color instead of image */}
+      <div className="absolute inset-0 bg-darkbg">
+      </div>{/* Video background - only load on non-mobile for performance */}
       {!isMobile && (
         <video
           ref={videoRef}
@@ -53,9 +50,8 @@ export function VideoBackground() {
           loop
           playsInline
           aria-hidden="true"
-          tabIndex={-1}
-          className="absolute inset-0 w-full h-full object-cover"
-          poster="/hero-fallback.jpg"
+          tabIndex={-1}          className="absolute inset-0 w-full h-full object-cover"
+          // No poster image
           // HTML5 video doesn't support loading="lazy"
         >
           <source src="/videos/studio-background.mp4" type="video/mp4" />

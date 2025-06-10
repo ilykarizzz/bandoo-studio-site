@@ -1,3 +1,4 @@
+// filepath: c:\Users\jojom\Documents\GitHub\bandoo-studio-site\src\lib\metadata.ts
 import { Metadata, Viewport } from 'next';
 
 /**
@@ -54,11 +55,12 @@ export const defaultMetadata: Metadata = {
         width: 1200,
         height: 630,
         alt: 'Bandoo Music Studio - Profesjonalne nagrania',
-      },      {
-        url: '/mikro.png',
+      },
+      {
+        url: '/gallery/studio-1.jpg',
         width: 1080, 
         height: 720,
-        alt: 'Bandoo Studio - Mikrofon Studyjny',
+        alt: 'Bandoo Studio - Wnętrze studia',
       }
     ],
   },  

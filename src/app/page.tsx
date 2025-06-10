@@ -77,18 +77,15 @@ export default function HomePage() {
             />
           ))}
         </div>
-        
-        <motion.div
+          <motion.div
           className="flex flex-col items-center z-10 px-4"
           style={{ opacity: heroOpacity, y: heroY }}
-        >          <div className="flex items-center justify-center">
-            <Logo />
-            
-            <motion.h1 
+        >          <div className="flex flex-col items-center justify-center">
+            <Logo />            <motion.h1 
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-[4rem] md:text-[6rem] font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan to-purple-500 text-center drop-shadow-[0_0_15px_rgba(0,224,255,0.5)] ml-4"
+              className="-mt-4 text-[4rem] md:text-[6rem] font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan to-purple-500 text-center drop-shadow-[0_0_15px_rgba(0,224,255,0.5)]"
             >
               Bandoo
             </motion.h1>

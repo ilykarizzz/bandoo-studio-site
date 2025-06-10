@@ -54,9 +54,8 @@ export function PricingSection() {
       }
     })
   };
-
   return (
-    <section className="py-24 bg-gradient-to-b from-darkbg to-black relative">
+    <section id="pricing" className="py-24 bg-gradient-to-b from-darkbg to-black relative">
       {/* Glowing orb background effect */}
       <div className="absolute top-1/2 left-1/4 w-64 h-64 rounded-full bg-cyan/5 blur-3xl -z-10"></div>
       <div className="absolute top-1/3 right-1/4 w-96 h-96 rounded-full bg-blue-600/5 blur-3xl -z-10"></div>
@@ -114,20 +113,22 @@ export function PricingSection() {
                       {feature}
                     </li>
                   ))}
-                </ul>
-                
-                <motion.button
+                </ul>                  <motion.a
+                  href={pkg.name === "Standard" ? "https://buy.stripe.com/14A00j1sj2lGe3k6MHaEE00" :
+                       pkg.name === "Pakiet 3h" ? "https://buy.stripe.com/8x26oH1sjf8sf7o6MHaEE01" : 
+                       "https://buy.stripe.com/9B65kDgnd0dy7EW2wraEE02"}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`w-full py-3 px-4 rounded-lg font-semibold transition-colors ${
+                  className={`block w-full py-3 px-4 rounded-lg font-semibold transition-colors text-center ${
                     pkg.popular 
                       ? 'bg-cyan text-black hover:bg-cyan/90' 
                       : 'bg-gray-800 text-white hover:bg-gray-700'
                   }`}
-                  onClick={() => alert('Funkcja rezerwacji wkrótce dostępna. Skontaktuj się z nami bezpośrednio!')}
                 >
-                  Zarezerwuj
-                </motion.button>
+                  Zarezerwuj i Zapłać
+                </motion.a>
               </div>
             </motion.div>
           ))}

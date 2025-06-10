@@ -24,8 +24,8 @@ export const defaultMetadata: Metadata = {
     template: '%s | Bandoo Studio'
   },
   description: 
-    'Studio nagrań Bandoo oferuje profesjonalne nagrania, mix, mastering oraz produkcję muzyczną z wykorzystaniem sprzętu premium (Neumann TLM 102, Arturia AudioFuse Studio, KRK Rokit 5). ' +
-    'Doświadczeni realizatorzy i przystępne ceny. Umów sesję już dziś!',
+    'Studio nagrań Bandoo oferuje profesjonalne nagrania, mix, mastering oraz produkcję muzyczną. ' +
+    'Nowoczesny sprzęt, doświadczeni realizatorzy i przystępne ceny. Umów sesję już dziś!',
   applicationName: 'Bandoo Studio',
   authors: [{ name: 'Bandoo Studio', url: 'https://bandoo.studio' }],
   creator: 'Bandoo Studio',
@@ -36,45 +36,36 @@ export const defaultMetadata: Metadata = {
     telephone: true,
   },
   alternates: {
-    canonical: 'https://bandoo.studio',
+    canonical: '/',
     languages: {
-      'pl-PL': 'https://bandoo.studio',
+      'pl': '/',
     },
-  },
-  openGraph: {
+  },  openGraph: {
     type: 'website',
     locale: 'pl_PL',
     url: 'https://bandoo.studio',
-    siteName: 'Bandoo Studio',
     title: 'Bandoo Studio - Profesjonalne Studio Nagrań | Warszawa',
     description: 'Studio nagrań Bandoo oferuje profesjonalne usługi: nagrania wokalne, mix, mastering z wykorzystaniem sprzętu premium (Neumann TLM 102, Arturia AudioFuse Studio, KRK Rokit 5). Zrealizuj swój projekt muzyczny już dziś!',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Bandoo Music Studio - Profesjonalne nagrania',
-      },      {
-        url: '/mikro.png',
-        width: 1080, 
-        height: 720,
-        alt: 'Bandoo Studio - Mikrofon Studyjny',
-      }
-    ],
-  },  
-  twitter: {
+    siteName: 'Bandoo Studio',
+    images: [{
+      url: '/og-image.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Bandoo Studio - Profesjonalne Studio Nagrań w Warszawie',
+    }],
+  },  twitter: {
     card: 'summary_large_image',
     title: 'Bandoo Studio - Profesjonalne Studio Nagrań | Warszawa',
     description: 'Studio nagrań Bandoo oferuje profesjonalne usługi: nagrania wokalne, mix, mastering z wykorzystaniem sprzętu premium (Neumann TLM 102, Arturia AudioFuse Studio, KRK Rokit 5).',
     images: ['/og-image.jpg'],
   },
   keywords: [
-    'studio nagrań warszawa', 
+    'studio nagrań', 
     'nagrywanie wokalu', 
     'mix', 
     'mastering', 
     'produkcja muzyczna', 
-    'studio muzyczne warszawa', 
+    'studio muzyczne', 
     'nagrania muzyczne',
     'studio nagraniowe',
     'realizacja dźwięku',
@@ -84,12 +75,45 @@ export const defaultMetadata: Metadata = {
     'profesjonalny miks',
     'rap nagrania',
     'nowoczesne studio nagrań',
-    'nagrywanie instrumentów',
-    'neumann tlm 102',
-    'arturia audiofuse studio',
-    'krk rokit 5'
+    'nagrywanie instrumentów'
   ],
-  robots: {
+  authors: [{ name: 'Bandoo Studio', url: 'https://bandoo-studio.pl' }],
+  creator: 'Bandoo Studio',
+  publisher: 'Bandoo Studio',
+  formatDetection: {
+    telephone: true,
+    email: true,
+    address: true,
+  },  openGraph: {
+    type: 'website',
+    locale: 'pl_PL',
+    url: 'https://bandoo.studio',
+    siteName: 'Bandoo Studio',
+    title: 'Bandoo Studio - Profesjonalne Studio Nagrań | Najwyższa Jakość Dźwięku',
+    description: 'Studio nagrań Bandoo oferuje profesjonalne nagrania, mix, mastering oraz produkcję muzyczną. Nowoczesny sprzęt, doświadczeni realizatorzy i przystępne ceny.',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Bandoo Music Studio - Profesjonalne nagrania',
+      },
+      {
+        url: '/gallery/studio-1.jpg',
+        width: 1080, 
+        height: 720,
+        alt: 'Bandoo Studio - Wnętrze studia',
+      }
+    ],
+  },  
+  twitter: {
+    card: 'summary_large_image',
+    site: '@bandoostudio',
+    creator: '@bandoostudio',
+    title: 'Bandoo Studio - Profesjonalne Studio Nagrań',
+    description: 'Studio nagrań Bandoo oferuje profesjonalne nagrania, mix, mastering oraz produkcję muzyczną. Umów sesję już dziś!',
+    images: ['/og-image.jpg'],
+  },  robots: {
     index: true,
     follow: true,
     googleBot: {
@@ -99,8 +123,14 @@ export const defaultMetadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  alternates: {
+    canonical: 'https://bandoo.studio',
+    languages: {
+      'pl-PL': 'https://bandoo.studio',
+    },
+  },
   verification: {
-    google: 'verification-code', // Replace with actual verification code when available
+    google: 'google-site-verification-code', // Replace with your verification code
   },
 };
 
@@ -119,7 +149,7 @@ export function generateMetadata(
   image?: string
 ): Metadata {
   const fullTitle = `${title} | Bandoo Studio`;
-  const url = `https://bandoo.studio${path}`;
+  const url = `https://bandoo-studio.pl${path}`;
   const ogImage = image || '/og-image.jpg';
   
   return {

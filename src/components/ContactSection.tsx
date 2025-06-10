@@ -166,9 +166,8 @@ export function ContactSection() {
       }
     })
   };
-
   return (
-    <section id="contact" className="py-20 bg-gray-900 relative">
+    <section id="contact" className="py-16 md:py-20 bg-gray-900 relative">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden opacity-10">
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-cyan rounded-full filter blur-3xl"></div>
@@ -180,16 +179,15 @@ export function ContactSection() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="max-w-6xl mx-auto px-4 relative z-10"
-      >
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
+        className="max-w-6xl mx-auto px-4 md:px-6 relative z-10"
+      >        <div className="flex flex-col lg:flex-row md:items-start md:justify-between gap-10">
           {/* Contact information */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="md:w-2/5 mb-10 md:mb-0"
+            className="lg:w-2/5 mb-10 lg:mb-0"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Kontakt</h2>
             <p className="text-gray-300 mb-10 text-lg">
@@ -202,21 +200,19 @@ export function ContactSection() {
                   <FiPhone className="text-cyan text-xl" />
                 </div>
                 <div>
-                  <p className="text-gray-400 text-sm">Telefon</p>
-                  <a href="tel:+48123456789" className="text-white hover:text-cyan transition-colors">
-                    +48 123 456 789
+                  <p className="text-gray-400 text-sm">Telefon</p>                  <a href="tel:+48667530007" className="text-white hover:text-cyan transition-colors">
+                    +48 667 530 007
                   </a>
                 </div>
               </div>
-              
-              <div className="flex items-center">
+                <div className="flex items-center">
                 <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-800 mr-4">
                   <FiMail className="text-cyan text-xl" />
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Email</p>
-                  <a href="mailto:kontakt@bandoostudio.pl" className="text-white hover:text-cyan transition-colors">
-                    kontakt@bandoostudio.pl
+                  <a href="mailto:Kornowski.karol1@gmail.com" className="text-white hover:text-cyan transition-colors">
+                    Kornowski.karol1@gmail.com
                   </a>
                 </div>
               </div>
@@ -230,21 +226,20 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Adres</p>
-                  <p className="text-white">ul. Muzyczna 42, Warszawa</p>
+                  <p className="text-white">ul. Swarozyca 5a, Chojnice</p>
                 </div>
               </div>
             </div>
           </motion.div>
-          
-          {/* Contact form */}
+            {/* Contact form */}
           <motion.div 
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="md:w-3/5"
+            className="lg:w-3/5"
           >
-            <div className="bg-gray-800 p-8 rounded-xl border border-gray-700 shadow-xl">
+            <div className="bg-gray-800 p-6 md:p-8 rounded-xl border border-gray-700 shadow-xl">
               <h3 className="text-2xl font-bold text-white mb-6">Wyślij zapytanie</h3>
               
               {status === 'success' ? (

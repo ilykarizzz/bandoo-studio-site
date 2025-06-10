@@ -5,7 +5,6 @@ import { PageTransition } from '../components/PageTransition';
 import { SkipToContent } from '../components/SkipToContent';
 import { CustomCursor } from '../components/CustomCursor';
 import { ScrollProgressBar } from '../components/ScrollProgressBar';
-import { ThemeProvider } from '../context/ThemeContext';
 import { ReducedMotionProvider } from '../context/ReducedMotionContext';
 import { Analytics } from '@vercel/analytics/react';
 import { defaultMetadata, viewport } from '../lib/metadata';
@@ -32,9 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify(localBusinessData)
           }}
         />
-      </head>
-      <body className="bg-light-bg dark:bg-darkbg text-gray-900 dark:text-white transition-colors duration-300">
-        <ThemeProvider>
+      </head>      <body className="bg-darkbg text-white transition-colors duration-300">
           <ReducedMotionProvider>
             <SkipToContent />
             <CustomCursor />
@@ -48,7 +45,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Footer />
             <Analytics />
           </ReducedMotionProvider>
-        </ThemeProvider>
       </body>
     </html>
   );

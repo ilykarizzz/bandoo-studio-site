@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { ThemeToggle } from './ThemeToggle';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,28 +38,18 @@ export function Navbar() {
       transition={{ duration: 0.5 }}
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-white/90 dark:bg-darkbg/90 backdrop-blur-md shadow-lg shadow-gray-200/50 dark:shadow-cyan/5' 
+          ? 'bg-darkbg/90 backdrop-blur-md shadow-lg shadow-cyan/5' 
           : 'bg-transparent'
       }`}
-    >
-      <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">        <a href="#" className="flex items-center space-x-2">
-          <div className="relative w-10 h-10">
-            <Image 
-              src="/bandoo-logo.png" 
-              alt="Bandoo Studio Logo" 
-              fill
-              className="object-contain"
-            />
-          </div>
-          <span className="text-gray-800 dark:text-cyan font-bold text-xl">BANDOO</span>
+    >      <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">        <a href="#" className="flex items-center space-x-2">
+          <span className="text-cyan font-bold text-xl">BANDOO</span>
         </a>
           {/* Desktop menu */}
-        <div className="hidden md:flex items-center space-x-1">
-          {navLinks.map((link, index) => (
+        <div className="hidden md:flex items-center space-x-1">          {navLinks.map((link, index) => (
             <motion.a
               key={index}
               href={link.href}
-              className="px-4 py-2 text-gray-300 dark:text-gray-300 hover:text-cyan dark:hover:text-cyan rounded-md transition-colors"
+              className="px-4 py-2 text-gray-300 hover:text-cyan rounded-md transition-colors"
               whileHover={{ 
                 scale: 1.05,
                 transition: { duration: 0.2 }
@@ -70,9 +59,6 @@ export function Navbar() {
               {link.name}
             </motion.a>
           ))}
-          <div className="ml-4">
-            <ThemeToggle />
-          </div>
         </div>
           {/* Mobile menu button */}
         <motion.button 
@@ -86,8 +72,7 @@ export function Navbar() {
         >
           {isOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
         </motion.button>
-      </div>
-        {/* Mobile menu */}
+      </div>        {/* Mobile menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -95,28 +80,23 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden bg-gray-900/95 backdrop-blur-md border-t border-gray-800"
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            className="md:hidden fixed top-[64px] left-0 right-0 w-full z-50 bg-darkbg/95 backdrop-blur-md border-t border-gray-800 shadow-xl"
             role="navigation"
             aria-label="Mobile navigation"
-          ><div className="flex flex-col space-y-1 p-4">
-              {navLinks.map((link, index) => (
+          ><div className="flex flex-col space-y-1 p-4">              {navLinks.map((link, index) => (
                 <motion.a
                   key={index}
                   href={link.href}
-                  className="px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-cyan hover:bg-gray-100 dark:hover:bg-gray-800/50 rounded-md transition-colors"
-                  initial={{ x: -20, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ delay: index * 0.1 }}
+                  className="px-4 py-3 text-gray-300 hover:text-cyan hover:bg-gray-800/50 rounded-md transition-colors font-medium text-lg flex items-center justify-center"
+                  initial={{ y: -10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: index * 0.05, ease: "easeOut" }}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
                 </motion.a>
               ))}
-              <div className="px-4 py-3 flex items-center justify-between">
-                <span className="text-gray-700 dark:text-gray-300">Motyw</span>
-                <ThemeToggle />
-              </div>
             </div>
           </motion.div>
         )}

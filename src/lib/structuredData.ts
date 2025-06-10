@@ -5,26 +5,23 @@ export function generateStructuredData() {  return {
     '@type': 'MusicGroup',
     name: 'Bandoo Studio',
     url: 'https://bandoo.studio',
-    logo: 'https://bandoo.studio/bandoo-logo.png',
+    logo: 'https://bandoo.studio/bandologo.png',
     image: 'https://bandoo.studio/og-image.jpg',
-    description: 'Profesjonalne studio nagrań oferujące usługi nagrywania, mixu, masteringu i produkcji muzycznej.',
-    address: {
+    description: 'Profesjonalne studio nagrań oferujące usługi nagrywania, mixu, masteringu i produkcji muzycznej.',    address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Warszawa',
-      addressRegion: 'Mazowieckie',
+      streetAddress: 'ul. Swarozyca 5a',
+      addressLocality: 'Chojnice',
+      addressRegion: 'Pomorskie',
       addressCountry: 'PL'
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: '52.229676',
-      longitude: '21.012229'
-    },
-    telephone: '+48123456789',
-    email: 'kontakt@bandoo-studio.pl',
+      latitude: '53.696170',
+      longitude: '17.554220'
+    },    telephone: '+48667530007',
+    email: 'Kornowski.karol1@gmail.com',
     sameAs: [
-      'https://www.facebook.com/bandoostudio',
-      'https://www.instagram.com/bandoostudio',
-      'https://www.youtube.com/bandoostudio'
+      'https://www.instagram.com/bandoo.studio/'
     ],
     openingHoursSpecification: [
       {

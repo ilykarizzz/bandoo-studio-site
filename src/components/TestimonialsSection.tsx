@@ -15,34 +15,28 @@ interface Testimonial {
 
 export function TestimonialsSection() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isAutoplay, setIsAutoplay] = useState(true);
-    const testimonials: Testimonial[] = [
-    {
-      name: "Michał K.",
+  const [isAutoplay, setIsAutoplay] = useState(true);    const testimonials: Testimonial[] = [    {
+      name: "Jastrząb",
       text: "Profesjonalne podejście i świetna atmosfera. Nagrania brzmią fenomenalnie! Polecam każdemu artyście, który szuka miejsca do nagrania swoich utworów.",
       role: "Raper",
-      avatar: "/avatars/avatar-1.png", // Using provided images
       rating: 5
     },
     {
-      name: "Zespół Euforia",
+      name: "Wojdes",
       text: "Współpraca z Bandoo Studio to sama przyjemność. Polecamy każdemu, kto szuka dobrego brzmienia. Studio jest wyposażone w najlepszy sprzęt, który pozwala uzyskać wyjątkowe brzmienie.",
-      role: "Zespół rockowy",
-      avatar: "/avatars/avatar-2.png", // Using provided images
+      role: "Producent",
       rating: 5
     },
     {
-      name: "Anna W.",
+      name: "Leszczu",
       text: "Mix i master na najwyższym poziomie. Będę wracać! Profesjonalizm i życzliwe podejście to coś, co wyróżnia Bandoo Studio na tle innych.",
-      role: "Wokalistka",
-      avatar: "/avatars/avatar-3.png", // Using provided images
+      role: "Wokalista",
       rating: 5
     },
     {
-      name: "Tomasz B.",
+      name: "Jacob.shawty",
       text: "Niesamowite doświadczenie! Każda minuta spędzona w Bandoo Studio była produktywna i przyjemna. Realizator pomógł mi dopracować każdy szczegół mojego utworu.",
       role: "Producent muzyczny",
-      avatar: "/avatars/avatar-4.png", // Using provided images
       rating: 5
     }
   ];
@@ -130,24 +124,14 @@ export function TestimonialsSection() {
                 <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H8c0-1.1.9-2 2-2V8zm12 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-1.1.9-2 2-2V8z"/>
               </svg>
               
-              <div className="flex flex-col md:flex-row items-center gap-6">
-                {/* Avatar */}
+              <div className="flex flex-col md:flex-row items-center gap-6">                {/* Initial letter avatar */}
                 <div className="flex-shrink-0">
                   <div className="relative w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-4 border-cyan shadow-lg shadow-cyan/20">
-                    {testimonials[activeIndex].avatar ? (
-                      <Image 
-                        src={testimonials[activeIndex].avatar}
-                        alt={testimonials[activeIndex].name}
-                        fill
-                        className="object-cover"
-                      />
-                    ) : (
-                      <div className="w-full h-full bg-gradient-to-br from-purple-500 to-cyan flex items-center justify-center">
-                        <span className="text-2xl font-bold text-white">
-                          {testimonials[activeIndex].name.charAt(0)}
-                        </span>
-                      </div>
-                    )}
+                    <div className="w-full h-full bg-gradient-to-br from-purple-500 to-cyan flex items-center justify-center">
+                      <span className="text-2xl font-bold text-white">
+                        {testimonials[activeIndex].name.charAt(0)}
+                      </span>
+                    </div>
                   </div>
                 </div>
                 
@@ -203,23 +187,13 @@ export function TestimonialsSection() {
               <p className="text-gray-300 italic line-clamp-3">
                 &ldquo;{testimonial.text}&rdquo;
               </p>
-              <div className="mt-4 flex items-center">
-                <div className="flex-shrink-0">
+              <div className="mt-4 flex items-center">                <div className="flex-shrink-0">
                   <div className="relative w-10 h-10 rounded-full overflow-hidden mr-3">
-                    {testimonial.avatar ? (
-                      <Image 
-                        src={testimonial.avatar}
-                        alt={testimonial.name}
-                        fill
-                        className="object-cover"
-                      />
-                    ) : (
-                      <div className="w-full h-full bg-gradient-to-br from-purple-500 to-cyan flex items-center justify-center">
-                        <span className="text-sm font-bold text-white">
-                          {testimonial.name.charAt(0)}
-                        </span>
-                      </div>
-                    )}
+                    <div className="w-full h-full bg-gradient-to-br from-purple-500 to-cyan flex items-center justify-center">
+                      <span className="text-sm font-bold text-white">
+                        {testimonial.name.charAt(0)}
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <div>

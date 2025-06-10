@@ -17,19 +17,17 @@ export function ServicesSection() {
         ease: "easeOut"
       }
     })
-  };
-
-  const services = [
+  };  const services = [
     {
       icon: FaMicrophone,
       title: "Nagrania",
-      description: "Neumann TLM 102 • AudioFuse • UAD",
+      description: "Neumann TLM 102 • AudioFuse • KRK 5",
       color: "from-cyan-500 to-blue-700"
     },
     {
       icon: FaHeadphones,
       title: "Mix & Master",
-      description: "FabFilter • UAD • Profesjonalny dźwięk",
+      description: "Industry standard plugins",
       color: "from-blue-600 to-blue-800"
     },
     {
@@ -39,27 +37,24 @@ export function ServicesSection() {
       color: "from-blue-700 to-cyan-500"
     }
   ];
-
-  return (
-    <section className="py-20 bg-darkbg relative">
+  return (    <section id="services" className="py-16 md:py-20 bg-darkbg relative">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan/50 to-transparent"></div>
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan/50 to-transparent"></div>
       
-      <div className="max-w-6xl mx-auto px-4 text-center space-y-16">
+      <div className="max-w-6xl mx-auto px-4 md:px-6 text-center space-y-12 md:space-y-16">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="text-5xl font-bold text-white"
+          transition={{ duration: 0.6 }}          className="text-3xl md:text-4xl lg:text-5xl font-bold text-white"
         >
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan to-blue-500">
             Co oferujemy
           </span>
         </motion.h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => (
             <motion.div 
               custom={index} 
@@ -70,16 +65,13 @@ export function ServicesSection() {
               whileHover={{ 
                 scale: 1.05,
                 transition: { duration: 0.2 }
-              }}
-              key={index} 
-              className="flex flex-col items-center p-6 rounded-xl bg-gray-900/50 backdrop-blur-sm border border-gray-800 hover:border-cyan/30 transition-all duration-300 group"
+              }}              key={index} 
+              className="flex flex-col items-center p-5 md:p-6 rounded-xl bg-gray-900/50 backdrop-blur-sm border border-gray-800 hover:border-cyan/30 transition-all duration-300 group"
             >
-              <div className={`p-4 rounded-full bg-gradient-to-br ${service.color} shadow-lg shadow-cyan/10 mb-6 group-hover:shadow-cyan/30 transition-all duration-300`}>
-                <service.icon className="text-white text-4xl" />
+              <div className={`p-3 md:p-4 rounded-full bg-gradient-to-br ${service.color} shadow-lg shadow-cyan/10 mb-4 md:mb-6 group-hover:shadow-cyan/30 transition-all duration-300`}>                <service.icon className="text-white text-2xl md:text-4xl" />
               </div>
-              
-              <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
-              <p className="text-gray-300">{service.description}</p>
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-2 md:mb-3">{service.title}</h3>
+              <p className="text-cyan text-sm md:text-base">{service.description}</p>
               
               <motion.div 
                 className="w-12 h-1 bg-cyan mt-4 rounded-full"

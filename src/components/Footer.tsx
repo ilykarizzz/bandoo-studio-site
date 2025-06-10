@@ -5,14 +5,13 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
-  const socialLinks = [
-    { icon: FaInstagram, href: "https://www.instagram.com/bandoo.studio/", label: "Instagram" }
+  const currentYear = new Date().getFullYear();  const socialLinks = [
+    { icon: FaInstagram, href: "https://www.instagram.com/studiobandoo/", label: "Instagram" }
   ];
   const contactInfo = [
-    { icon: FaMapMarkerAlt, text: "ul. Przykładowa 123, Warszawa" },
-    { icon: FaPhone, text: "+48 123 456 789" },
-    { icon: FaEnvelope, text: "kontakt@bandoo.studio" }
+    { icon: FaMapMarkerAlt, text: "ul. Swarozyca 5a, Chojnice" },
+    { icon: FaPhone, text: "+48 667 530 007" },
+    { icon: FaEnvelope, text: "Kornowski.karol1@gmail.com" }
   ];
 
   const fadeInUp = {
@@ -44,13 +43,12 @@ export function Footer() {
             variants={fadeInUp}
             custom={0}
             className="col-span-1"
-          >
-            <div className="flex items-center mb-4">
-              <div className="relative w-10 h-10 mr-3">
+          >            <div className="flex items-center mb-4">              <div className="relative w-10 h-10 mr-3 mt-2">
                 <Image 
-                  src="/bandoo-logo.png" 
+                  src="/bandologo.png" 
                   alt="Bandoo Studio Logo" 
                   fill
+                  className="translate-y-2"
                   className="object-contain"
                 />
               </div>
@@ -84,16 +82,20 @@ export function Footer() {
             variants={fadeInUp}
             custom={1}
             className="col-span-1"
-          >
-            <h4 className="text-white text-lg font-bold mb-6">Szybki dostęp</h4>
+          >            <h4 className="text-white text-lg font-bold mb-6">Szybki dostęp</h4>
             <ul className="space-y-3">
-              {['Oferta', 'Cennik', 'Referencje', 'Kontakt'].map((item, i) => (
+              {[
+                { name: 'Oferta', href: '#services' },
+                { name: 'Cennik', href: '#pricing' },
+                { name: 'Referencje', href: '#testimonials' },
+                { name: 'Kontakt', href: '#contact' }
+              ].map((item, i) => (
                 <li key={i}>
                   <a 
-                    href={`#${item.toLowerCase()}`} 
+                    href={item.href} 
                     className="text-gray-400 hover:text-cyan transition-colors flex items-center"
                   >
-                    <span className="mr-2">→</span> {item}
+                    <span className="mr-2">→</span> {item.name}
                   </a>
                 </li>
               ))}
