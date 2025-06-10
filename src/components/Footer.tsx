@@ -48,8 +48,7 @@ export function Footer() {
                   src="/bandologo.png" 
                   alt="Bandoo Studio Logo" 
                   fill
-                  className="translate-y-2"
-                  className="object-contain"
+                  className="translate-y-2 object-contain"
                 />
               </div>
               <h3 className="text-cyan text-xl font-bold">Bandoo Studio</h3>
